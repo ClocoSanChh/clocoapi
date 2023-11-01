@@ -7,10 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-##Route List
+## Route List
 Following are the route lists.
 
-##Login And Register
+## Login And Register
 Links for login and register:
 - [POST            api/login] [required fields: email, password]
 - POST            api/register [required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]
