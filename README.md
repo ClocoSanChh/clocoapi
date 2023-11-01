@@ -8,8 +8,10 @@
 </p>
 
 ##Route List
+Following are the route lists.
 
 ##Login And Register
+Links for login and register:
 - [POST            api/login] [required fields: email, password]
 - POST            api/register [required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]
 
