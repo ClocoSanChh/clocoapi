@@ -26,23 +26,23 @@ Links for login and register:
 ## Artists
 - <b>[GET|HEAD]</b>        <i>api/artists</i> <b>[Fetch all artists]</b>
 - <b>[POST]</b>            <i>api/artists</i> <b>[required fields: name] [optional fields: dob, gender, address, first_release_year, no_of_albums_released ]</b>
-- <b>[GET|HEAD]</b>        <i>api/artists/{artist} [Fetch single artist using id]
-- <b>[PUT|PATCH]</b>       <i>api/artists/{artist} <b>[Update artist info using id]</b>
-- <b>[DELETE]</b>          <i>api/artists/{artist} <b>[Delete artist using id]</b>
+- <b>[GET|HEAD]</b>        <i>api/artists/{artist}</i> [Fetch single artist using id]
+- <b>[PUT|PATCH]</b>       <i>api/artists/{artist}</i> <b>[Update artist info using id]</b>
+- <b>[DELETE]</b>          <i>api/artists/{artist}</i> <b>[Delete artist using id]</b>
 
 ## Songs
-- <b>[GET|HEAD]</b>        <i>api/songs <b>[Fetch all songs]</b>
-- <b>[POST]</b>            <i>api/songs <b>[required fields: artist_id, title] [optional fields: album_name, genre]</b>
-- <b>[GET|HEAD]</b>        <i>api/songs/{song} <b>[required fields: email, password]</b>
-- <b>[PUT|PATCH]</b>       <i>api/songs/{song} <b>[required fields: email, password]</b>
-- <b>[DELETE]</b>          <i>api/songs/{song} <b>[required fields: email, password]</b>
+- <b>[GET|HEAD]</b>        <i>api/songs</i> <b>[Fetch all songs]</b>
+- <b>[POST]</b>            <i>api/songs</i> <b>[required fields: artist_id, title] [optional fields: album_name, genre]</b>
+- <b>[GET|HEAD]</b>        <i>api/songs/{song}</i> <b>[Fetch single song using id]</b>
+- <b>[PUT|PATCH]</b>       <i>api/songs/{song}</i> <b>[Update song info using id]</b>
+- <b>[DELETE]</b>          <i>api/songs/{song}</i> <b>[Delete song using id]</b>
 
 ## Comments
-- <b>[GET|HEAD]</b>        <i>api/comments <b>[required fields: email, password]</b>
-- <b>[POST]</b>            <i>api/comments <b>[required fields: email, password]</b>
-- <b>[GET|HEAD]</b>        <i>api/comments/{comment} <b>[required fields: email, password]</b>
-- <b>[PUT|PATCH]</b>       <i>api/comments/{comment} <b>[required fields: email, password]</b>
-- <b>[DELETE]</b>          <i>api/comments/{comment} <b>[required fields: email, password]</b>
+- <b>[GET|HEAD]</b>        <i>api/comments</i> <b>[Fetch all comments]</b>
+- <b>[POST]</b>            <i>api/comments</i> <b>[required fields: song_id, comment, commentable_id, commentable_type]</b>
+- <b>[GET|HEAD]</b>        <i>api/comments/{comment}</i> <b>[Fetch single comment using id]</b>
+- <b>[PUT|PATCH]</b>       <i>api/comments/{comment}</i> <b>[Update comment info using id] [required field: comment]</b>
+- <b>[DELETE]</b>          <i>api/comments/{comment}</i> <b>[Delete comment using id]</b>
 
 
 
