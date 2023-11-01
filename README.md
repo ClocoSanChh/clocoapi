@@ -12,30 +12,39 @@ Following are the route lists.
 
 ## Login And Register
 Links for login and register:
-- [POST]            <i>api/login</i> <b>[required fields: email, password]</b>
-- POST            api/register [required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]
+- <b>[POST]</b>            <i>api/login</i> <b>[required fields: email, password]</b>
+- <b>[POST]</b>            <i>api/register</i> <b>[required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]</b>
 
-- GET|HEAD        api/artists [Fetch all artists]
-- POST            api/artists [required fields: name] [optional fields: dob, gender, address, first_release_year, no_of_albums_released ]
-- GET|HEAD        api/artists/{artist} [Fetch single artist using id]
-- PUT|PATCH       api/artists/{artist} artists.update › ArtistController@upda…
-- DELETE          api/artists/{artist} artists.destroy › ArtistController@des…
-- GET|HEAD        api/comments ...... comments.index › CommentController@index
-- POST            api/comments ...... comments.store › CommentController@store
-- GET|HEAD        api/comments/{comment} comments.show › CommentController@sh…
-- PUT|PATCH       api/comments/{comment} comments.update › CommentController@…
-- DELETE          api/comments/{comment} comments.destroy › CommentController…
-- GET|HEAD        api/songs ............... songs.index › SongController@index
-- POST            api/songs ............... songs.store › SongController@store
-- GET|HEAD        api/songs/{song} .......... songs.show › SongController@show
-- PUT|PATCH       api/songs/{song} ...... songs.update › SongController@update
-- DELETE          api/songs/{song} .... songs.destroy › SongController@destroy
-- GET|HEAD        api/user ....................... generated::EfX7rRfK9kPqLlXd
-- GET|HEAD        api/users ............... users.index › UserController@index
-- POST            api/users ............... users.store › UserController@store
-- GET|HEAD        api/users/{user} .......... users.show › UserController@show
-- PUT|PATCH       api/users/{user} ...... users.update › UserController@update
-- DELETE          api/users/{user} .... users.destroy › UserController@destroy
+## User
+- <b>[GET|HEAD]</b>        <i>api/user <b>[Fetch logged user info]</b>
+- <b>[GET|HEAD]</b>        <i>api/users <b>[Fetch all users list]</b>
+- <b>[POST]</b>            <i>api/users <b>[required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]</b>
+- <b>[GET|HEAD]</b>        <i>api/users/{user} <b>[Fetch user using id]</b>
+- <b>[PUT|PATCH]</b>       <i>api/users/{user} <b>[Update user info using id]</b>
+- <b>[DELETE]</b>          <i>api/users/{user} <b>[Delete user using id]</b>
+
+## Artists
+- <b>[GET|HEAD]</b>        <i>api/artists</i> <b>[Fetch all artists]</b>
+- <b>[POST]</b>            <i>api/artists</i> <b>[required fields: name] [optional fields: dob, gender, address, first_release_year, no_of_albums_released ]</b>
+- <b>[GET|HEAD]</b>        <i>api/artists/{artist} [Fetch single artist using id]
+- <b>[PUT|PATCH]</b>       <i>api/artists/{artist} <b>[Update artist info using id]</b>
+- <b>[DELETE]</b>          <i>api/artists/{artist} <b>[Delete artist using id]</b>
+
+## Songs
+- <b>[GET|HEAD]</b>        <i>api/songs <b>[Fetch all songs]</b>
+- <b>[POST]</b>            <i>api/songs <b>[required fields: artist_id, title] [optional fields: album_name, genre]</b>
+- <b>[GET|HEAD]</b>        <i>api/songs/{song} <b>[required fields: email, password]</b>
+- <b>[PUT|PATCH]</b>       <i>api/songs/{song} <b>[required fields: email, password]</b>
+- <b>[DELETE]</b>          <i>api/songs/{song} <b>[required fields: email, password]</b>
+
+## Comments
+- <b>[GET|HEAD]</b>        <i>api/comments <b>[required fields: email, password]</b>
+- <b>[POST]</b>            <i>api/comments <b>[required fields: email, password]</b>
+- <b>[GET|HEAD]</b>        <i>api/comments/{comment} <b>[required fields: email, password]</b>
+- <b>[PUT|PATCH]</b>       <i>api/comments/{comment} <b>[required fields: email, password]</b>
+- <b>[DELETE]</b>          <i>api/comments/{comment} <b>[required fields: email, password]</b>
+
+
 
 
 ## About Laravel
