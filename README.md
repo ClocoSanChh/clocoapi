@@ -16,12 +16,12 @@ Links for login and register:
 - <b>[POST]</b>            <i>api/register</i> <b>[required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]</b>
 
 ## User
-- <b>[GET|HEAD]</b>        <i>api/user <b>[Fetch logged user info]</b>
-- <b>[GET|HEAD]</b>        <i>api/users <b>[Fetch all users list]</b>
-- <b>[POST]</b>            <i>api/users <b>[required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]</b>
-- <b>[GET|HEAD]</b>        <i>api/users/{user} <b>[Fetch user using id]</b>
-- <b>[PUT|PATCH]</b>       <i>api/users/{user} <b>[Update user info using id]</b>
-- <b>[DELETE]</b>          <i>api/users/{user} <b>[Delete user using id]</b>
+- <b>[GET|HEAD]</b>        <i>api/user</i> <b>[Fetch logged user info]</b>
+- <b>[GET|HEAD]</b>        <i>api/users</i> <b>[Fetch all users list]</b>
+- <b>[POST]</b>            <i>api/users</i> <b>[required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]</b>
+- <b>[GET|HEAD]</b>        <i>api/users/{user}</i> <b>[Fetch user using id]</b>
+- <b>[PUT|PATCH]</b>       <i>api/users/{user}</i> <b>[Update user info using id]</b>
+- <b>[DELETE]</b>          <i>api/users/{user}</i> <b>[Delete user using id]</b>
 
 ## Artists
 - <b>[GET|HEAD]</b>        <i>api/artists</i> <b>[Fetch all artists]</b>
