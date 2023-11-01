@@ -7,6 +7,35 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+##Route List
+
+##Login And Register
+- POST            api/login [required fields: email, password]
+- POST            api/register [required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]
+
+- GET|HEAD        api/artists [Fetch all artists]
+- POST            api/artists [required fields: name] [optional fields: dob, gender, address, first_release_year, no_of_albums_released ]
+- GET|HEAD        api/artists/{artist} [Fetch single artist using id]
+- PUT|PATCH       api/artists/{artist} artists.update › ArtistController@upda…
+- DELETE          api/artists/{artist} artists.destroy › ArtistController@des…
+- GET|HEAD        api/comments ...... comments.index › CommentController@index
+- POST            api/comments ...... comments.store › CommentController@store
+- GET|HEAD        api/comments/{comment} comments.show › CommentController@sh…
+- PUT|PATCH       api/comments/{comment} comments.update › CommentController@…
+- DELETE          api/comments/{comment} comments.destroy › CommentController…
+- GET|HEAD        api/songs ............... songs.index › SongController@index
+- POST            api/songs ............... songs.store › SongController@store
+- GET|HEAD        api/songs/{song} .......... songs.show › SongController@show
+- PUT|PATCH       api/songs/{song} ...... songs.update › SongController@update
+- DELETE          api/songs/{song} .... songs.destroy › SongController@destroy
+- GET|HEAD        api/user ....................... generated::EfX7rRfK9kPqLlXd
+- GET|HEAD        api/users ............... users.index › UserController@index
+- POST            api/users ............... users.store › UserController@store
+- GET|HEAD        api/users/{user} .......... users.show › UserController@show
+- PUT|PATCH       api/users/{user} ...... users.update › UserController@update
+- DELETE          api/users/{user} .... users.destroy › UserController@destroy
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -21,46 +50,3 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
