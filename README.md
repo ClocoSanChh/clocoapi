@@ -10,7 +10,7 @@
 ##Route List
 
 ##Login And Register
-- POST            api/login [required fields: email, password]
+- [POST            api/login] [required fields: email, password]
 - POST            api/register [required fields: firstname, lastname, email, password] [optional fields: phone, dob, gender, address ]
 
 - GET|HEAD        api/artists [Fetch all artists]
