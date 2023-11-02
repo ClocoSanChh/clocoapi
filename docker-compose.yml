@@ -1,0 +1,34 @@
+version: "3.5"
+services:
+    db:
+        container_name: db.laravel-api
+        build: "build/mysql"
+        platform: linux/amd64
+        ports:
+            - "${MYSQL_PORT}:3306"
+        volumes:
+            - ./tmp/tmp_mysql:/tmp --user 1000
+            - ./tmp/src-db_volume:/var/lib/mysql --user 1000
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: laravel-music
+            MYSQL_USER: laravel_user
+            MYSQL_PASSWORD: laravel_pass
+        command: mysqld --sql_mode=""
+        networks:
+            - api_network
+    app:
+        container_name: app.laravel-api
+        build:
+            args:
+                user: user
+                uid: 1000
+            context: ./
+            dockerfile: "build/app/Dockerfile"
+        networks:
+            - api_network
+        ports:
+            - "${WEB_PORT}:8000"
+networks:
+    api_network:
+        driver: bridge
