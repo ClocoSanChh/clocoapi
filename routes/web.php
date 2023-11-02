@@ -2,6 +2,7 @@
 
 use App\Models\Artist;
 use App\Models\Song;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,8 +22,8 @@ Route::get('/', function () {
 //        'name' => 'sandy',
 //        'first_release_year' => 2015
 //    ]);
-    $artists = Artist::all();
+    $comments = Comment::all();
     return response()->json([
-        'data' => $artists
+        'data' => $comments
     ]);
 });
