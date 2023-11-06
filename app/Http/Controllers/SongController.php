@@ -36,7 +36,7 @@ class SongController extends Controller
     {
         try {
             $song = Song::findOrFail($id);
-            return new SongResource($song->load('comments'));
+            return new SongResource($song->load(['comments', 'artist']));
         } catch (\Exception $e) {
             return response()->json([
                 'message' => $e->getMessage()

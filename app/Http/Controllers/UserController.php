@@ -18,7 +18,8 @@ class UserController extends Controller
     {
         $users = User::all();
         return response()->json([
-            'data' => $users
+            'data' => $users,
+            'count' => count($users)
         ]);
     }
 
@@ -29,7 +30,7 @@ class UserController extends Controller
     {
         $user = User::create($request->validated());
         return response()->json([
-            "message" => "user Created",
+            "message" => "user Created Successfully",
             'user' => $user
         ])->setStatusCode(200);
     }

@@ -16,7 +16,11 @@ class ArtistController extends Controller
     public function index()
     {
         $artists = Artist::all();
-        return ArtistResource::collection($artists);
+        return response()->json([
+            'data' => ArtistResource::collection($artists),
+            'count' => count($artists)
+        ]);
+        return ;
     }
 
     /**
@@ -41,7 +45,7 @@ class ArtistController extends Controller
             return new ArtistResource($artist->load('songs', 'comments'));
         } catch (\Exception $e) {
             return response()->json([
-                'message' => $e->getMessage()
+                'message' => $e->getMessage(),
             ]);
         }
     }

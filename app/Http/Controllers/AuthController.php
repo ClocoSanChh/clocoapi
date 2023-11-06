@@ -36,9 +36,20 @@ class AuthController extends Controller
         $validated = $request->validated();
         $user = User::create($validated);
         return response()->json([
+            "message" => "User Created Successfully",
+            'user' => $user,
             'access_token' => $user->createToken('api_token')->plainTextToken,
-            'token_type' => 'Bearer',
-            'logged_email' => $user->email
-        ], 201);
+            'token_type' => 'Bearer'
+        ])->setStatusCode(201);
+    }
+
+    public function logout()
+    {
+        $user = Auth::user();
+        $token = $user->tokens()->find($user->currentAccessToken()['id']);
+        $token->delete();
+        return response()->json([
+            'message' => 'Logged Out Successfully',
+        ]);
     }
 }
